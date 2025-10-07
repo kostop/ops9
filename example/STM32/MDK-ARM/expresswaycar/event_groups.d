@@ -1,0 +1,15 @@
+expresswaycar\event_groups.o: ../Middlewares/Third_Party/FreeRTOS/Source/event_groups.c
+expresswaycar\event_groups.o: D:\YingYong\Keil5\ARM\ARMCC\Bin\..\include\stdlib.h
+expresswaycar\event_groups.o: ../Middlewares/Third_Party/FreeRTOS/Source/include/FreeRTOS.h
+expresswaycar\event_groups.o: D:\YingYong\Keil5\ARM\ARMCC\Bin\..\include\stddef.h
+expresswaycar\event_groups.o: D:\YingYong\Keil5\ARM\ARMCC\Bin\..\include\stdint.h
+expresswaycar\event_groups.o: ../Core/Inc/FreeRTOSConfig.h
+expresswaycar\event_groups.o: ../Middlewares/Third_Party/FreeRTOS/Source/include/projdefs.h
+expresswaycar\event_groups.o: ../Middlewares/Third_Party/FreeRTOS/Source/include/portable.h
+expresswaycar\event_groups.o: ../Middlewares/Third_Party/FreeRTOS/Source/include/deprecated_definitions.h
+expresswaycar\event_groups.o: ../Middlewares/Third_Party/FreeRTOS/Source/portable/RVDS/ARM_CM3/portmacro.h
+expresswaycar\event_groups.o: ../Middlewares/Third_Party/FreeRTOS/Source/include/mpu_wrappers.h
+expresswaycar\event_groups.o: ../Middlewares/Third_Party/FreeRTOS/Source/include/task.h
+expresswaycar\event_groups.o: ../Middlewares/Third_Party/FreeRTOS/Source/include/list.h
+expresswaycar\event_groups.o: ../Middlewares/Third_Party/FreeRTOS/Source/include/timers.h
+expresswaycar\event_groups.o: ../Middlewares/Third_Party/FreeRTOS/Source/include/event_groups.h

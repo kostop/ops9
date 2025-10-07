@@ -1,0 +1,15 @@
+expresswaycar\queue.o: ../Middlewares/Third_Party/FreeRTOS/Source/queue.c
+expresswaycar\queue.o: D:\YingYong\Keil5\ARM\ARMCC\Bin\..\include\stdlib.h
+expresswaycar\queue.o: D:\YingYong\Keil5\ARM\ARMCC\Bin\..\include\string.h
+expresswaycar\queue.o: ../Middlewares/Third_Party/FreeRTOS/Source/include/FreeRTOS.h
+expresswaycar\queue.o: D:\YingYong\Keil5\ARM\ARMCC\Bin\..\include\stddef.h
+expresswaycar\queue.o: D:\YingYong\Keil5\ARM\ARMCC\Bin\..\include\stdint.h
+expresswaycar\queue.o: ../Core/Inc/FreeRTOSConfig.h
+expresswaycar\queue.o: ../Middlewares/Third_Party/FreeRTOS/Source/include/projdefs.h
+expresswaycar\queue.o: ../Middlewares/Third_Party/FreeRTOS/Source/include/portable.h
+expresswaycar\queue.o: ../Middlewares/Third_Party/FreeRTOS/Source/include/deprecated_definitions.h
+expresswaycar\queue.o: ../Middlewares/Third_Party/FreeRTOS/Source/portable/RVDS/ARM_CM3/portmacro.h
+expresswaycar\queue.o: ../Middlewares/Third_Party/FreeRTOS/Source/include/mpu_wrappers.h
+expresswaycar\queue.o: ../Middlewares/Third_Party/FreeRTOS/Source/include/task.h
+expresswaycar\queue.o: ../Middlewares/Third_Party/FreeRTOS/Source/include/list.h
+expresswaycar\queue.o: ../Middlewares/Third_Party/FreeRTOS/Source/include/queue.h

@@ -1,0 +1,14 @@
+expresswaycar\croutine.o: ../Middlewares/Third_Party/FreeRTOS/Source/croutine.c
+expresswaycar\croutine.o: ../Middlewares/Third_Party/FreeRTOS/Source/include/FreeRTOS.h
+expresswaycar\croutine.o: D:\YingYong\Keil5\ARM\ARMCC\Bin\..\include\stddef.h
+expresswaycar\croutine.o: D:\YingYong\Keil5\ARM\ARMCC\Bin\..\include\stdint.h
+expresswaycar\croutine.o: ../Core/Inc/FreeRTOSConfig.h
+expresswaycar\croutine.o: ../Middlewares/Third_Party/FreeRTOS/Source/include/projdefs.h
+expresswaycar\croutine.o: ../Middlewares/Third_Party/FreeRTOS/Source/include/portable.h
+expresswaycar\croutine.o: ../Middlewares/Third_Party/FreeRTOS/Source/include/deprecated_definitions.h
+expresswaycar\croutine.o: ../Middlewares/Third_Party/FreeRTOS/Source/portable/RVDS/ARM_CM3/portmacro.h
+expresswaycar\croutine.o: ../Middlewares/Third_Party/FreeRTOS/Source/include/mpu_wrappers.h
+expresswaycar\croutine.o: ../Middlewares/Third_Party/FreeRTOS/Source/include/task.h
+expresswaycar\croutine.o: ../Middlewares/Third_Party/FreeRTOS/Source/include/list.h
+expresswaycar\croutine.o: ../Middlewares/Third_Party/FreeRTOS/Source/include/croutine.h
+expresswaycar\croutine.o: ../Middlewares/Third_Party/FreeRTOS/Source/include/list.h

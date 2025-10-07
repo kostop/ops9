@@ -1,0 +1,12 @@
+expresswaycar\list.o: ../Middlewares/Third_Party/FreeRTOS/Source/list.c
+expresswaycar\list.o: D:\YingYong\Keil5\ARM\ARMCC\Bin\..\include\stdlib.h
+expresswaycar\list.o: ../Middlewares/Third_Party/FreeRTOS/Source/include/FreeRTOS.h
+expresswaycar\list.o: D:\YingYong\Keil5\ARM\ARMCC\Bin\..\include\stddef.h
+expresswaycar\list.o: D:\YingYong\Keil5\ARM\ARMCC\Bin\..\include\stdint.h
+expresswaycar\list.o: ../Core/Inc/FreeRTOSConfig.h
+expresswaycar\list.o: ../Middlewares/Third_Party/FreeRTOS/Source/include/projdefs.h
+expresswaycar\list.o: ../Middlewares/Third_Party/FreeRTOS/Source/include/portable.h
+expresswaycar\list.o: ../Middlewares/Third_Party/FreeRTOS/Source/include/deprecated_definitions.h
+expresswaycar\list.o: ../Middlewares/Third_Party/FreeRTOS/Source/portable/RVDS/ARM_CM3/portmacro.h
+expresswaycar\list.o: ../Middlewares/Third_Party/FreeRTOS/Source/include/mpu_wrappers.h
+expresswaycar\list.o: ../Middlewares/Third_Party/FreeRTOS/Source/include/list.h
