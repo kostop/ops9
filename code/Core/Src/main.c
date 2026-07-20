@@ -76,7 +76,7 @@ int main(void)
 {
 
   /* USER CODE BEGIN 1 */
-
+	uint8_t robot_cmd;
   /* USER CODE END 1 */
 
   /* MCU Configuration--------------------------------------------------------*/
@@ -116,21 +116,20 @@ int main(void)
   /* USER CODE BEGIN WHILE */
   while (1)
   {
+	robot_cmd = get_ops_cmd_data();
+	if(robot_cmd == ROBOT_CMD_RESTART)
+	{
+		Robot_com_prepare_reset();
+		NVIC_SystemReset();
+	}
+
+	ops9_dirt = robot_cmd - 0x30U;
 	LED_task(LED_DELAY);
 	Encoder_task();
 	Robot_com_send_data();
 	Control_task(ops9_dirt);
 	IMU_check_task();
 	delay_ms(TASK_TIME_OUT);
-	switch(get_ops_cmd_data())
-	{
-		case 0x22:
-			NVIC_SystemReset();
-			break;
-		default:
-			ops9_dirt = get_ops_cmd_data()-0x30;
-			
-	}
     /* USER CODE END WHILE */
 
     /* USER CODE BEGIN 3 */
@@ -189,11 +188,42 @@ void LED_task(uint32_t delay)
 	}
 }
 
+/**
+  * @brief  串口接收完成回调
+  * @param  huart 发生接收完成事件的HAL串口句柄
+  * @retval None
+  */
 void HAL_UART_RxCpltCallback(UART_HandleTypeDef *huart)
 {
 	if(huart->Instance == USART2)
 	{
 		Robot_com_call_back();
+	}
+}
+
+/**
+  * @brief  串口发送完成回调
+  * @param  huart 发生发送完成事件的HAL串口句柄
+  * @retval None
+  */
+void HAL_UART_TxCpltCallback(UART_HandleTypeDef *huart)
+{
+	if(huart->Instance == USART2)
+	{
+		Robot_com_tx_complete_callback();
+	}
+}
+
+/**
+  * @brief  串口错误回调
+  * @param  huart 发生错误的HAL串口句柄
+  * @retval None
+  */
+void HAL_UART_ErrorCallback(UART_HandleTypeDef *huart)
+{
+	if(huart->Instance == USART2)
+	{
+		Robot_com_error_callback();
 	}
 }
 

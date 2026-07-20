@@ -44,7 +44,7 @@
 
 > **高风险：半双工场景下，在发送未完成时重新启动接收，或在接收回调中直接发起发送，可能使 HAL 的 `gState` / `RxState` 长期保持 `HAL_UART_STATE_BUSY_*`。后续 `HAL_UART_Transmit_*` 或 `HAL_UART_Receive_*` 会持续返回 `HAL_BUSY`，表现为串口“锁死”。**
 
-- 同一 UART 同一时刻只允许一个收发事务。发送前检查状态或维护独立的软件状态机；不要像当前 `Robot_com_send_data()` 一样无条件高频调用 `HAL_UART_Transmit_IT()` 后又假定已经发送成功。
+- 同一 UART 同一时刻只允许一个发送事务。当前 `Robot_com_send_data()` 已检查发送状态并保护异步发送缓冲区；后续修改仍必须检查 HAL 返回值，不能无条件高频启动 `HAL_UART_Transmit_IT()`。
 - 半双工方向应由明确的状态机控制：停止接收 -> 切换为发送方向 -> 启动发送 -> 在 `HAL_UART_TxCpltCallback()` 中确认发送完成 -> 切换为接收方向 -> 重新启动接收。
 - 不要在 `HAL_UART_RxCpltCallback()`、`HAL_UARTEx_RxEventCallback()` 等中断回调中使用阻塞式 `HAL_UART_Transmit()`、延时函数或复杂业务逻辑。回调只记录事件、复制数据或投递标志，实际发送放到主循环或任务中处理。
 - 必须检查每次 HAL 串口调用的返回值。发生 `HAL_BUSY`、超时、帧错误、噪声错误或溢出错误时，先停止当前事务并清理错误标志，再按统一的恢复流程重新初始化或重新启动接收。

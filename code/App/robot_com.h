@@ -5,6 +5,8 @@
 #include "ops9_control.h"
 #include "stm32f1xx_hal.h"
 
+#define ROBOT_CMD_RESTART		0x22U
+
 typedef __packed struct
 {
 	uint8_t header;
@@ -31,6 +33,9 @@ typedef struct
 void Robot_com_init(void);
 void Robot_com_call_back(void);
 void Robot_com_send_data(void);
+void Robot_com_tx_complete_callback(void);
+void Robot_com_error_callback(void);
+void Robot_com_prepare_reset(void);
 
 uint8_t get_ops_cmd_data(void);
 
